@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+	<title>Payment</title>
+	<style type="text/css">
+
+	body{
+		background-image:url('addfood.jpg');
+		background-size: 100%;
+	}
+	
+		#Payment{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.form-shape input, .form-shape select, .form-shape textarea{
+   width: 92%;
+   padding: 0.5rem;
+}
+/*Changing the color of placeholder*/
+::placeholder{                  
+    color:gray;
+}
+/*Making the webpage responsive using media quries*/
+@media only screen and (max-width:1131px){
+    #row4{
+        width: 42vw;
+    }
+    #row5{
+        width:45vw;
+    }
+    #row6{
+        margin-top: 20px;
+        width:90vw;
+    }
+}
+@media only screen and (min-width:600px) and (max-width:781px)
+{
+    #row4{
+        width:84vw;
+        margin: auto;
+        margin-left: 22px;
+    }
+    #row5{
+        
+        width:84vw;
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 22px;
+    }
+    #row6{
+        width:84vw;
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 22px;
+    }
+}
+@media only screen and (max-width:600px){
+    #row4{
+        width:78vw;
+        margin: auto;
+        margin-left: 3px;
+    }
+    #row5{
+        
+        width:78vw;
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 3px;
+    }
+    #row6{
+        width:78vw;
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 3px;
+    }
+}
+@media only screen and (min-height:1000px){
+    #navbar{
+        height:10vh;
+    }
+    #container1::before{
+        height:39vh;
+    }
+    #container1{
+        height:44vh
+    }
+}
+
+	</style>
+</head>
+
+<body>
+	<div id="Payment">
+		<h1 style="color:pink">Payment</h1>
+		<form action="sucess.html">
+			<div class="form-shape">
+				<label for="Payment" style="color:orange">
+					Type of Payment
+				</label>
+				<select name="myPayment" id="payment">
+					<option value="sel" selected>
+						Select
+					</option>
+					<option value="ord">
+						UPI
+					</option>
+					<option value="Site">
+						NET BANKING
+					</option>
+					<option value="fed">
+						DEBIT/CREDIT CARD
+					</option>
+					<option value="others">
+						COD
+					</option>
+				</select>
+			</div>
+			<div class="form-shape">
+				<label for="name" style="color:orange">Name</label>
+				<input type="text" required name="myName"
+					id="name"
+					placeholder="Enter your Name">
+			</div>
+			<div class="form-shape">
+				<label for="email" style="color:orange;">Email-Id</label>
+				<input type="email" required name="myEmail"
+					id="email"
+					placeholder="Enter your email">
+			</div>
+			<div class="form-shape">
+				<label for="pho" style="color:orange;">Phone Number</label>
+				<input type="tel" name="phone number" required pattern="[0-9]{10}" 
+					id="pho"
+					placeholder="Enter your Phone no">
+			</div>
+			<div class="form-shape">
+				<label for="message" style="color:orange">
+					Address
+				</label>
+				<textarea name="mesg" id="message"
+					cols="30" rows="10">
+				</textarea>
+			</div>
+			<a href="sucess.html"><input type="submit" value="Submit"></a>
+			<input type="reset" value="Reset">
+		</form>
+	</div>
+</body>
+
+</html>
+
+
